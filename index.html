@@ -1,0 +1,138 @@
+<html>
+
+<head>
+	<title>Running car</title>
+	<style>
+		body {
+			background-image: url('images/sky.jpg');
+			background-size: cover;
+			background-position: center;
+			position: relative;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+		}
+
+		.highway {
+			height: 200px;
+			width: 500%;
+			display: block;
+			background-image: url('images/road.jpg');
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 1;
+			animation: highway 15s linear infinite;
+		}
+
+		@keyframes highway {
+			100% {
+				transform: translatex(-3000px);
+			}
+		}
+
+		.city {
+			height: 250px;
+			width: 500%;
+			background-image: url(images/city.png);
+			position: absolute;
+			bottom: 200px;
+			left: 0;
+			right: 0;
+			display: block;
+			z-index: 1;
+			background-repeat: repeat-x;
+			animation: city 5s linear infinite;
+		}
+
+		@keyframes city {
+			100% {
+				transform: translatex(-1000px);
+			}
+		}
+
+		.car {
+			width: 100px;
+			left: 35%;
+			bottom: 85px;
+			transform: translatex(-40%);
+			position: absolute;
+			z-index: 2;
+		}
+
+		.car img {
+			width: 400%;
+			animation: car 10s linear infinite;
+		}
+
+		@keyframes car {
+			100% {
+				transform: translatey(-1px);
+			}
+
+			50% {
+				transform: translatey(1px);
+			}
+
+			0% {
+				transform: translatey(-1px);
+			}
+		}
+
+		.wheel {
+			left: 50%;
+			bottom: 160px;
+			transform: translatex(50%);
+			position: absolute;
+			z-index: 2;
+		}
+
+		.wheel img {
+			width: 70px;
+			height: 70px;
+			animation: wheel 1s linear infinite;
+		}
+
+		.back-wheel {
+			left: -235px;
+			position: absolute;
+		}
+
+		.front-wheel {
+			left: 12px;
+			position: absolute;
+		}
+
+		@keyframes wheel {
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="hero"></div>
+	<div class="highway"></div>
+	<div class="city"></div>
+	<div class="car">
+		<img src="images/car.png">
+	</div>
+	<div class="wheel">
+		<img src="images/wheel.png" class="back-wheel">
+		<img src="images/wheel.png" class="front-wheel">
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+</body>
